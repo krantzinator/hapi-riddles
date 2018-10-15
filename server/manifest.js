@@ -20,6 +20,12 @@ module.exports = new Confidence.Store({
             }
         }
     },
+    routes: {
+      cors: {
+        $filter: 'NODE_ENV',
+        development: true
+      }
+    },
     register: {
         plugins: [
             {
@@ -47,7 +53,8 @@ module.exports = new Confidence.Store({
                     production: {
                         migrateOnStart: false
                     }
-                }
+                },
+                plugin: './plugins/swagger'
             },
             {
                 plugin: {
