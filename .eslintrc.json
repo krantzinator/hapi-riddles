@@ -1,0 +1,9 @@
+{
+  "extends": "eslint-config-hapi",
+  "parserOptions": {
+    "ecmaVersion": 9
+  },
+  "rules": {
+    "indent": ["error", 2]
+  }
+}
